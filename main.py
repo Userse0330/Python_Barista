@@ -1,4 +1,3 @@
-start = ''
 #Import Modules
 import time
 import sys

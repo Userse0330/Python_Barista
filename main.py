@@ -55,6 +55,6 @@ if asdasdasdgsdf=="Hire lawyers" or "Hire Lawyers" or "hire lawyers" or "Hire La
 elif asdasdasdgsdf=="Leave" or "leave":
   print("You left the coffee shop and lost",price)
 
-print("Goodbye! Come back later.")
+print("Goodbye, Come back later!")
 time.sleep(5)
 print(chr(27) + "[2J")

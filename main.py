@@ -1,29 +1,50 @@
 #Import Modules
 import time
 import sys
+import random
 
+choices = "Hire lawyers against the company", "Say sorry and leave without getting a cup of coffee"
 
 name = "Test."
 print(chr(27) + "[2J")
-username = input("What is your name: ")
+print("Welcome to Simple_Barista")
+username = input("What is your name? ")
 menu = "Espresso", "Cappuccino", "Mocha","Latte","Frappe"
 print("What would you like to order",username,"?","Take a look at our menu:", menu)
 order = input()
 price = 60
-quantity = input("How many would you like:\n")
+sure = input("Are you sure you want to continue? ")
+if sure=="No":
+ sys.exit("User Stopped.")
+
+print(chr(27) + "[2J")
+quantity = input("How many would you like?\n")
 total = price * int(quantity)
 print("You ordered:", quantity, order)
 print("your total is:",total)
-time.sleep(8)
+time.sleep(4)
 print(chr(27) + "[2J")
 print("Preparing your", order)
-time.sleep(10)
+time.sleep(5)
 print(chr(27) + "[2J")
-thankyou = "Thank you for shopping at Simple_Barista."
-time.sleep(8)
-for char in thankyou:
-    time.sleep(0.1)
-    sys.stdout.write(char)
-    sys.stdout.flush()
+print("done")
+time.sleep(2)
 print(chr(27) + "[2J")
-#Made by sebastian
+choices = "Hire lawyers against the company","Leave the shop without any coffe altough you will loose",price
+randomnumber = 5
+
+if int(quantity) > 50:
+  print("Oh no! I spilled your coffe. Here are your choices:" ,choices)
+  asdasdasdgsdf = input("What do you choose to do? ")
+
+
+
+if asdasdasdgsdf=="Hire lawyers" or "Hire Lawyers" or "hire lawyers" or "Hire Lawyers":
+  value1 = random.randint(0,10)
+  if value1== 4:
+    print("You lost the case and need to pay",price *2)
+  if int(value1) > 4:
+    print("You won the case and you got the",price,"back.")
+elif asdasdasdgsdf=="Leave" or "leave":
+  print("You left the coffee shop and lost",price)
+

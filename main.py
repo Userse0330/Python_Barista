@@ -34,27 +34,27 @@ print(chr(27) + "[2J")
 print("done")
 time.sleep(2)
 print(chr(27) + "[2J")
-choices = "Hire lawyers against the company","Leave the shop without any coffe altough you will loose",price
+choices = "Hire lawyers against the company","Leave the shop without any coffe altough you will loose",int(total) * 2
 randomnumber = 5
 
 if int(quantity) > 50:
   print("Oh no! I spilled your coffe. Here are your choices:" ,choices)
-  asdasdasdgsdf = input("What do you choose to do? ")
+  lawyerinput = input("What do you choose to do? ")
 else:
    print("Goodbye! Come back later.")
    sys.exit("User done")
 
 
 
-if asdasdasdgsdf=="Hire lawyers" or "Hire Lawyers" or "hire lawyers" or "Hire Lawyers":
+if lawyerinput=="Hire lawyers" or "Hire Lawyers" or "hire lawyers" or "Hire Lawyers" or "lawyer" or "Lawyer" or "lawers" or "Lawyers":
   value1 = random.randint(0,10)
-  if value1== 4:
-    print("You lost the case and need to pay",price *2)
+  if value1 < 4:
+    print("You lost the case and need to pay",total *2)
   if int(value1) > 4:
-    print("You won the case and you got the",price,"back.")
-elif asdasdasdgsdf=="Leave" or "leave":
+    print("You left and won the case. You got",total,"back.")
+elif lawyerinput=="Leave" or "leave":
   print("You left the coffee shop and lost",price)
 
-print("Goodbye, Come back later!")
+
 time.sleep(5)
 print(chr(27) + "[2J")
